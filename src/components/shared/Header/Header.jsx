@@ -9,13 +9,13 @@ const Header = () => {
     return (
         <div>
             
-            <nav className="navbar  bg-gray-400 px-12  flex md:px-24 justify-between ">
+            <nav className="navbar   bg-gray-400 bg-transparent absolute top-0   px-12  flex md:px-24 justify-between ">
   <a className="w-1/6  cursor-pointer">
     <div className=""><img src="Logo.svg" alt="" /></div>
   </a>
 
   <div className="w-5/6 justify-end md:flex  ">
-    <ul className={`flex-col ${openNav ? 'top-16 left-0':'top-16 -left-[800px] '} absolute  py-3 md:py-0  w-full leading-3 md:static   bg-gray-400 bg-opacity-90 z-10  menu flex md:flex-row menu-horizontal text-xs sm:text-base  md:text-lg text-end justify-end  text-white duration-1000`}>
+    <ul className={`flex-col ${openNav ? 'top-16 left-0':'top-16 -left-[800px] '} absolute  py-3 md:py-0  w-full leading-3 md:static   bg-gray-400 bg-transparent bg-opacity-70 z-10  menu flex md:flex-row menu-horizontal text-xs sm:text-base  md:text-lg text-end justify-end  text-white duration-1000`}>
     <li className=''><ActiveLink to=''>Home</ActiveLink></li>
 
       <li className=''><ActiveLink to=''>My Blog</ActiveLink></li>
