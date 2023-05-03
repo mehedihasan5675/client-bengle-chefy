@@ -12,7 +12,7 @@ const Header = () => {
             
             <nav className="navbar   bg-gray-400 bg-transparent absolute top-0   px-12  flex md:px-24 justify-between ">
   <Link to="/" className=" w-2/6  cursor-pointer">
-    <div className="text-lg tracking-wider md:text-xl text-yellow-300 font-bold">Bengal CheF</div>
+    <div className="text-lg tracking-wider md:text-xl text-yellow-300 font-bold">Bengal CheFy</div>
   </Link>
 
   <div className=" w-4/6 justify-end md:flex  ">

@@ -59,6 +59,60 @@ arrayIndex++;
       }
       </div>
 </div>
+
+
+
+
+
+
+
+
+<div className='my-20'>
+<h3 className='italic text-center text-base text-yellow-700 font-medium'>Special menu offers.</h3>
+<h4 className='text-2xl md:text-4xl italic tracking-wider text-white font-bold text-center pb-5'>Our Menu</h4>
+
+  <div className="hero   " style={{ backgroundImage: `url("https://images.pexels.com/photos/14808868/pexels-photo-14808868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")` }}>
+  <div className="hero-overlay bg-black bg-opacity-80"></div>
+  <div className="text-slate-100 w-full px-20 flex py-10 lg:gap-10  flex-col lg:flex-row">
+      <div className='w-full lg:w-1/2 relative'>
+        <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Bangle Faluda </span><span className='text-yellow-200 font-semibold tracking-wider'>360 taka/- </span></p>
+
+        <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Shatkora Murgi </span><span className='text-yellow-200 font-semibold tracking-wider'>450 taka/- </span></p>
+
+        <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Chingri Macher Malaikari</span><span className='text-yellow-200 font-semibold tracking-wider'>750 taka/- </span></p>
+
+
+        <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Bhuna Khichuri</span><span className='text-yellow-200 font-semibold tracking-wider'>510 taka/- </span></p>
+
+
+
+        <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Chitol Macher Muitha</span><span className='text-yellow-200 font-semibold tracking-wider'>475 taka/- </span></p>
+
+
+        <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Shorshe Ilish</span><span className='text-yellow-200 font-semibold tracking-wider'>685 taka/- </span></p>
+
+        <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Lau Shaker Chorchori</span><span className='text-yellow-200 font-semibold tracking-wider'>275 taka/- </span></p>
+
+        <div className='h-full w-2 bg-slate-200 hidden lg:block absolute top-0 -right-5'></div>
+      </div>
+      <div className='w-full lg:w-1/2 relative'>
+      <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Bengali Fish Curry</span><span className='text-yellow-200 font-semibold tracking-wider'>365 taka/- </span></p>
+
+      <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Beef Bhuna</span><span className='text-yellow-200 font-semibold tracking-wider'>510 taka/- </span></p>
+
+      <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Mutton Kacchi Biryani</span><span className='text-yellow-200 font-semibold tracking-wider'>470 taka/- </span></p>
+
+      <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Beef Tehari</span><span className='text-yellow-200 font-semibold tracking-wider'>500 taka/- </span></p>
+
+      <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Chingri Malaikari</span><span className='text-yellow-200 font-semibold tracking-wider'>350 taka/- </span></p>
+
+      <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>Chicken Noodle Soup</span><span className='text-yellow-200 font-semibold tracking-wider'>285 taka/- </span></p>
+      <p className='text-base md:text-lg flex my-5 justify-between font-semibold tracking-wider italic'><span className='text-slate-200 font-semibold tracking-wider'>MZD Kacchi Biryani</span><span className='text-yellow-200 font-semibold tracking-wider'>1000 taka/- </span></p>
+      <div className='h-full w-2 bg-yellow-300 hidden lg:block absolute top-0 -left-5'></div>
+      </div>
+    </div>
+</div>
+</div>
         </div>
     );
 };
