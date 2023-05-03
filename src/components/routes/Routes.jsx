@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
       {
         path:'chef-recipes/:id',
         element:<ChefRecipe></ChefRecipe>,
-        loader:({params})=>fetch(`http://localhost:7000/chef/${params.id}`)
+        loader:({params})=>fetch(`https://chef-recipe-hunter-server-side-lilac.vercel.app/chef/${params.id}`)
       }
     ]
       

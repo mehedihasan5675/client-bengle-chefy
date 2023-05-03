@@ -23,7 +23,7 @@ arrayIndex++;
     }, 3000);
   }, []);
   useEffect(()=>{
-    fetch(`http://localhost:7000/`)
+    fetch(`https://chef-recipe-hunter-server-side-lilac.vercel.app/`)
     .then(res=>res.json())
     .then(data=>{
       console.log(data);
