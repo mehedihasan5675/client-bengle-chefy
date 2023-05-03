@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className=''>
-            <footer className="footer pt-20  px-20 py-4 border-t bg-black  ">
+            <footer className="footer pt-5  px-20 py-4 border-t bg-black  ">
   <div className="items-center  grid-flow-col">
     
     <p className='text-slate-200'><span className='text-lg tracking-wider md:text-xl text-yellow-300 font-bold'>Bengal CheFy</span> <br/>Providing reliable tech since 2023</p>
@@ -19,11 +19,11 @@ const Footer = () => {
 </footer>
             <footer className="footer px-20 grid pb-20 grid-cols-2 md:grid-cols-3 text-white p-10 bg-black ">
   <div>
-    <span className="footer-title">Services</span> 
-    <a className="link link-hover">Food Delevery</a> 
-    <a className="link link-hover">Best Chef</a> 
-    <a className="link link-hover">Marketing</a> 
-    <a className="link link-hover">Advertisement</a>
+    <span >Services</span> 
+    <p>Food Delevery</p> 
+    <p>Best Chef</p> 
+    <p>Marketing</p> 
+    <p>Advertisement</p>
   </div> 
   <div>
     <span className="footer-title">Short Link</span> 
@@ -35,9 +35,16 @@ const Footer = () => {
   </div>  
   <div>
     <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a> 
-    <a className="link link-hover">Privacy policy</a> 
-    <a className="link link-hover">Cookie policy</a>
+    <p>Terms of use</p> 
+    <p>Privacy policy</p> 
+    <p>Cookie policy</p>
+  </div>
+
+  <div>
+    <span className="footer-title">Contact </span> 
+    <p>Email: mdchanchal@gmail.com</p> 
+    <p>Phone: +8801609182195</p> 
+    <p>Location: Mirput-14,Binnas Vobon,Dhaka,Bangladesh</p>
   </div>
 </footer> 
 
