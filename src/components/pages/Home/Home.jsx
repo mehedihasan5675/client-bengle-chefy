@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import ChefCard from './SingleCard/ChefCard/ChefCard';
 
 const Home = () => {
-  const [chef,setChef]=useState(null)
+  const [chefs,setChefs]=useState(null)
   const [text,setText]=useState("Explore the world of gourmet cuisine with our talented chef Our chef's passion for food will leave you hungry for more.")
   const textArray=[
     "Savor the flavors of our culinary creations Indulge in the art of food with our expert chef",
@@ -26,7 +27,7 @@ arrayIndex++;
     .then(res=>res.json())
     .then(data=>{
       console.log(data);
-      setChef(data)
+      setChefs(data)
     })
   },[])
     return (
@@ -50,6 +51,12 @@ arrayIndex++;
       <div className='py-10'>
         <h3 className='italic text-base text-yellow-700 font-medium'>Our Awesome team</h3>
         <h2 className='text-2xl md:text-4xl italic tracking-wider text-white font-bold'>Met Our Chefs</h2>
+      </div>
+
+      <div className='grid mx-10 md:mx-20 md:grid-cols-2 xl:grid-cols-3 gap-10  '>
+      { chefs &&
+        chefs.map(chef=><ChefCard key={chef._id} chef={chef}></ChefCard>)
+      }
       </div>
 </div>
         </div>
