@@ -19,7 +19,7 @@ const ChefCard = ({chef}) => {
         <p className='text-left'><GrUserExpert className='inline-block mr-1 mb-1 bg-slate-300 rounded-sm'/> Experience:<span className='text-yellow-200 text-base '>   {years_of_experience}</span> years</p>
         
     </div>
-    <button   className="btn mt-5 font-bold btn-warning"><Link to={`/chef-Recipes/${chef._id}`}>View Recipes</Link></button>
+    <Link to={`/chef-recipes/${chef._id}`}><button   className="btn mt-5 font-bold w-full btn-warning">View Recipes</button></Link>
   </div>
 </div>
         </div>
