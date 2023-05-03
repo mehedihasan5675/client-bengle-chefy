@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 import ChefCard from './SingleCard/ChefCard/ChefCard';
 
 const Home = () => {
@@ -67,11 +68,11 @@ arrayIndex++;
 
 
 
-<div className='my-20'>
+<div className='mt-20'>
 <h3 className='italic text-center text-base text-yellow-700 font-medium'>Special menu offers.</h3>
-<h4 className='text-2xl md:text-4xl italic tracking-wider text-white font-bold text-center pb-5'>Our Menu</h4>
+<h4 className='text-2xl md:text-4xl italic tracking-wider text-white font-bold text-center pb-10'>Our Menu</h4>
 
-  <div className="hero   " style={{ backgroundImage: `url("https://images.pexels.com/photos/14808868/pexels-photo-14808868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")` }}>
+  <div className="hero bg-fixed   " style={{ backgroundImage: `url("https://images.pexels.com/photos/14808868/pexels-photo-14808868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")` }}>
   <div className="hero-overlay bg-black bg-opacity-80"></div>
   <div className="text-slate-100 w-full px-20 flex py-10 lg:gap-10  flex-col lg:flex-row">
       <div className='w-full lg:w-1/2 relative'>
@@ -111,6 +112,49 @@ arrayIndex++;
       <div className='h-full w-2 bg-yellow-300 hidden lg:block absolute top-0 -left-5'></div>
       </div>
     </div>
+</div>
+</div>
+
+
+
+<div className='pt-10'>
+<h3 className='italic text-center text-base text-yellow-700 font-medium'>Enjoy your time with pleasure</h3>
+<h3  className='text-2xl md:text-4xl italic tracking-wider text-white font-bold text-center pb-7 '>Our Achievement</h3>
+</div>
+
+<div >
+
+<div className="hero bg-fixed " style={{ backgroundImage: `url("https://images.pexels.com/photos/16496268/pexels-photo-16496268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")` }}>
+  <div className="hero-overlay    bg-black bg-opacity-80"></div>
+  <div className="text-slate-200 py-40 w-full grid md:grid-cols-2 lg:grid-cols-4 gap-10  px-20">
+    <div className='text-center'>
+      <h2 className='italic text-5xl mb-7 font-extrabold tracking-widest text-yellow-700'><CountUp end={254}duration={5}></CountUp></h2>
+      <h3 className='italic font-semibold text-lg lg:text-xl tracking-widest'>New Visiters Every Week</h3>
+      <p className='font-extrabold tracking-widest text-yellow-700'>...</p>
+      
+    </div>
+
+    <div className='text-center'>
+      <h2 className='italic text-5xl mb-7 font-extrabold tracking-widest text-yellow-700'><CountUp end={12168}duration={5}></CountUp></h2>
+      <h3 className='italic font-semibold text-lg lg:text-xl tracking-widest'>Happy Customers Every Year</h3>
+      <p className='font-extrabold tracking-widest text-yellow-700'>...</p>
+      
+    </div>
+
+    <div className='text-center'>
+      <h2 className='italic text-5xl mb-7 font-extrabold tracking-widest text-yellow-700'><CountUp end={172}duration={5}></CountUp></h2>
+      <h3 className='italic font-semibold text-lg lg:text-xl tracking-widest'>Won Awards</h3>
+      <p className='font-extrabold tracking-widest text-yellow-700'>...</p>
+      
+    </div>
+
+    <div className='text-center'>
+      <h2 className='italic text-5xl mb-7 font-extrabold tracking-widest text-yellow-700'><CountUp end={732}duration={5}></CountUp></h2>
+      <h3 className='italic font-semibold text-lg lg:text-xl tracking-widest'>Weekly Deliveries</h3>
+      <p className='font-extrabold tracking-widest text-yellow-700'>...</p>
+      
+    </div>
+  </div>
 </div>
 </div>
         </div>
