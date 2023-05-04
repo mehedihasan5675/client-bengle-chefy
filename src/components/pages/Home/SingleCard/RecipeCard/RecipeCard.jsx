@@ -17,7 +17,7 @@ const [favourite,setFavourite]=useState(false)
     return (
         <div className=' pb-10 '>
             <div className="card   lg:card-side bg-gray-800 shadow-xl">
-  <figure className=' w-full h-[390px] lg:w-4/12'><LazyLoadImage effect='blur' height='500px' width='400px' className='w-full ' src={recipe_url} alt="Album"/></figure>
+  <figure className=' w-full h-[390px] lg:w-4/12'><LazyLoadImage  effect='blur'  width='400px' className='w-full ' src={recipe_url} alt="Album"/></figure>
   <div className="card-body w-full lg:8/12 text-slate-300">
     <h2 className="card-title text-slate-200 text-2xl md:text-4xl">{recipe_name}</h2>
     
