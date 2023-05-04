@@ -10,7 +10,7 @@ const ChefCard = ({chef}) => {
         <div>
             <div className="card bg-gray-800 card-compact w-full  shadow-xl">
   <figure className='h-96 '><LazyLoadImage effect='blur'
-  height="500px" width="400px" className='w-full ' src={chef_picture} alt="chef-img" /></figure>
+   className='w-full ' src={chef_picture} alt="chef-img" /></figure>
   <div className="card-body text-slate-300">
     <h2 className="card-title text-slate-200">{chef_name}</h2>
     <div className='flex justify-between '>
