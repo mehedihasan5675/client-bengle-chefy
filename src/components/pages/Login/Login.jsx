@@ -6,7 +6,7 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 const Login = () => {
   const [error,setError]=useState('')
   const [success,setSuccess]=useState('')
-  const {loginUser}=useContext(AuthContext)
+  const {loginUser,providerGoogle,providerGithub}=useContext(AuthContext)
 const handleLogin=(e)=>{
 e.preventDefault()
 const form=e.target
@@ -27,6 +27,36 @@ toast.success('Successfully Login!')
   
 })
 }
+const handleGoogleLogin=()=>{
+  providerGoogle()
+  .then(result=>{
+    console.log(result.user);
+    setError('')
+    setSuccess('Successfully Login!')
+    toast.success('Successfully Login with Google!')
+  })
+  .catch(error=>{
+    console.log(error.message);
+    setSuccess('')
+    setError(error.message.slice(9,-1))
+  })
+}
+
+
+const handleGithubLogin=()=>{
+  providerGithub()
+  .then(result=>{
+    console.log(result.user);
+    setError('')
+    setSuccess('Successfully Login!')
+    toast.success('Successfully Login with Github!')
+  })
+  .catch(error=>{
+    console.log(error.message);
+    setSuccess('')
+    setError(error.message.slice(9,-1))
+  })
+}
     return (
         <div className='bg-gray-800 pb-40 pt-56 justify-center flex md:pt-20'>
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -43,7 +73,7 @@ toast.success('Successfully Login!')
           </label>
           <input type="password"name='password' placeholder="password" className="input input-bordered" />
           <p className='text-red-400 italic'>{error}</p>
-          <p className='text-green-500 italic'>{success}</p>
+          {/* <p className='text-green-500 italic'>{success}</p> */}
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
@@ -53,12 +83,12 @@ toast.success('Successfully Login!')
         </div>
         <Link className='text-sm link-hover text-pink-500' to="/register">New to Bengal CheFy? <span className=' '>Please Register</span></Link>
 
-        <div className='flex flex-col gap-2'>
-        <button className="btn w-full btn-outline btn-info">Login With Google</button>
-      <button className="btn w-full btn-outline">Login With Github</button>
-      </div>
+        
       </form>
-
+      <div className='flex px-10 flex-col pb-5 gap-2'>
+        <button onClick={handleGoogleLogin} className="btn w-full btn-outline btn-info">Login With Google</button>
+      <button onClick={handleGithubLogin} className="btn w-full btn-outline">Login With Github</button>
+      </div>
       
     </div>
     <ToastContainer></ToastContainer>

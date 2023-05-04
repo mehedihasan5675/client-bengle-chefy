@@ -79,7 +79,7 @@ const Register = () => {
           <input type="text" name='photoURL'  placeholder="Photo URL" className="input input-bordered" required/>
         </div>
         <p className='text-red-400 italic'>{error}</p>
-          <p className='text-green-500 italic'>{success}</p>
+          {/* <p className='text-green-500 italic'>{success}</p> */}
         <div className="form-control mt-6">
           <button className="btn btn-primary " >Register</button>
         </div>
