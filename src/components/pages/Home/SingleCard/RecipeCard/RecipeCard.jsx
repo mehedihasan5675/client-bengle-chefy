@@ -1,11 +1,16 @@
 import { Rating } from '@smastrom/react-rating';
-import React from 'react';
+import React, { useState } from 'react';
 
 import '@smastrom/react-rating/style.css';
-import { FaLayerGroup, FaMediumM } from 'react-icons/fa';
+import { FaHeart, FaLayerGroup, FaMediumM } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const RecipeCard = ({recipe}) => {
-
-    
+const [favourite,setFavourite]=useState(false)
+    const handleFavourite=()=>{
+      setFavourite(!favourite)
+      toast.info("the Recipe that you like Most!")
+    }
     const {recipe_name,recipe_url,rating,cooking_method,ingredients}=recipe
     console.log(recipe);
     return (
@@ -21,14 +26,19 @@ const RecipeCard = ({recipe}) => {
     <p className='text-base text-left mt-2'><FaMediumM className='inline-block mr-1 mb-1'></FaMediumM><span className=''><span className='font-bold text-white'>Cooking method: </span>{cooking_method}</span> </p>
         
     
-    <div className="flex  justify-start mt-2">
-    <Rating style={{ maxWidth: 150 }} readOnly value={rating}  />
-     <span className='text-lg font-semibold ml-3 mt-0.5'>{rating}</span>   
+    <div className="flex justify-between">
+      <div className='flex  justify-start mt-2'>
+      <Rating style={{ maxWidth: 150 }} readOnly value={rating}  />
+     <span className='text-lg font-semibold ml-3 mt-0.5'>{rating}</span>
+      </div>
+
+      <button onClick={handleFavourite} disabled={favourite} ><FaHeart className={`${favourite ? "text-red-600  text-3xl ":"text-white text-2xl"}`} ></FaHeart></button>
         
     </div>
    
   </div>
 </div>
+<ToastContainer></ToastContainer>
         </div>
     );
 };
