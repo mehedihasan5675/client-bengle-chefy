@@ -1,9 +1,19 @@
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import ActiveLink from '../../ActiveLink/ActiveLink';
+
 const Header = () => {
+  const {user,logOut}=useContext(AuthContext)
     const [openNav,setOpenNav]=useState(false)
+    const handleLogOut=()=>{
+      logOut()
+      .then(()=>{})
+      .catch(error=>{
+        console.log(error);
+      })
+    }
     const handleNav=()=>{
       setOpenNav(!openNav)
     }
@@ -20,7 +30,10 @@ const Header = () => {
     <li className=''><ActiveLink to='/'>Home</ActiveLink></li>
 
       <li className=''><ActiveLink to='/blog'>My Blog</ActiveLink></li>
-      <li className=''><ActiveLink to='/login'>Login</ActiveLink></li>
+      {
+        user ? <div className='flex items-center gap-3 ml-3'><img title={user.displayName} className='h-10 cursor-pointer w-10 md:h-12 md:w-12 rounded-full' src={user.photoURL} alt="Profile" /> <button onClick={handleLogOut} className="btn btn-outline  btn-warning">Log Out</button></div>:<li className=''><ActiveLink to='/login'>Login</ActiveLink></li>
+      }
+      
       
     </ul>
     
