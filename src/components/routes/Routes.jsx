@@ -5,6 +5,7 @@ import {
 import Main from "../layout/Main/Main";
 import Blog from "../pages/Blog/Blog";
 import ChefRecipe from "../pages/ChefRecipe/ChefRecipe/ChefRecipe";
+import Errorpage from "../pages/Errorpage/Errorpage";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'*',
+        element:<Errorpage></Errorpage>
       }
     ]
       
