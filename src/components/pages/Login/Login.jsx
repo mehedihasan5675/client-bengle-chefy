@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
@@ -7,8 +7,13 @@ const Login = () => {
   const [error,setError]=useState('')
   const [success,setSuccess]=useState('')
   const {loginUser,providerGoogle,providerGithub}=useContext(AuthContext)
+  const location=useLocation()
+console.log(location);
+const navigate=useNavigate()
+const from = location.state?.from?.pathname || '/'
 const handleLogin=(e)=>{
 e.preventDefault()
+
 const form=e.target
 const email=form.email.value 
 const password=form.password.value
@@ -19,13 +24,15 @@ loginUser(email,password)
   setError('')
   setSuccess('Successfully Login!')
 toast.success('Successfully Login!')
+navigate(from, { replace: true })
 })
 .catch(error=>{
   console.log(error);
   setSuccess('')
-  setError(error.message.slice(9,-1))
+  setError(error.message)
   
 })
+
 }
 const handleGoogleLogin=()=>{
   providerGoogle()
@@ -34,6 +41,7 @@ const handleGoogleLogin=()=>{
     setError('')
     setSuccess('Successfully Login!')
     toast.success('Successfully Login with Google!')
+    navigate(from, { replace: true })
   })
   .catch(error=>{
     console.log(error.message);
@@ -50,6 +58,7 @@ const handleGithubLogin=()=>{
     setError('')
     setSuccess('Successfully Login!')
     toast.success('Successfully Login with Github!')
+    navigate(from, { replace: true })
   })
   .catch(error=>{
     console.log(error.message);

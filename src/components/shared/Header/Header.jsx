@@ -1,17 +1,21 @@
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import ActiveLink from '../../ActiveLink/ActiveLink';
 
 const Header = () => {
   const {user,logOut}=useContext(AuthContext)
     const [openNav,setOpenNav]=useState(false)
+    const navigate=useNavigate()
     const handleLogOut=()=>{
       logOut()
-      .then(()=>{})
+      .then(()=>{
+        navigate('/')
+      })
       .catch(error=>{
         console.log(error);
+       
       })
     }
     const handleNav=()=>{

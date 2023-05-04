@@ -15,9 +15,9 @@ const ChefRecipe = () => {
            <div className="hero min-h-screen" style={{ backgroundImage: `url(${chef_picture})` }}>
   <div className="hero-overlay bg-opacity-30"></div>
   <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-lg">
-      <h1 className="mb-5 tracking-wider  text-2xl italic text-white font-bold">Welcome to </h1>
-      <p className="mb-5   tracking-widest  shadow-current p-5 rounded-lg  shadow-2xl text-5xl italic font-bold"><span className='text-yellow-300'>{chef_name}</span> <span className='text-white text-3xl'>Recipes ShowCase!</span></p>
+    <div className="max-w-lg mt-16 md:mt-24 py-10">
+      <h1 className="mb-5 tracking-wider text-lg md:text-2xl italic text-white font-bold">Welcome to </h1>
+      <p className="mb-5   tracking-widest  shadow-current p-5 rounded-lg  shadow-2xl text-3xl md:text-5xl italic font-bold"><span className='text-yellow-300'>{chef_name}</span> <span className='text-white text-lg md:text-3xl block'>Recipes ShowCase!</span></p>
       <div className=''>
       <div className='mt-10 italic'>
             <p className='mb-5 tracking-wider'>{short_bio}</p>
