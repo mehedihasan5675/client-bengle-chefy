@@ -1,13 +1,16 @@
 import React from 'react';
 import { FaCookie, FaThumbsUp } from 'react-icons/fa';
 import { GrUserExpert } from "react-icons/gr";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Link } from 'react-router-dom';
 const ChefCard = ({chef}) => {
     const {chef_name,chef_picture,likes,num_of_recipes,years_of_experience}=chef
     return (
         <div>
             <div className="card bg-gray-800 card-compact w-full  shadow-xl">
-  <figure className='h-96 '><img className='w-full ' src={chef_picture} alt="chef-img" /></figure>
+  <figure className='h-96 '><LazyLoadImage effect='blur'
+  height="500px" width="400px" className='w-full ' src={chef_picture} alt="chef-img" /></figure>
   <div className="card-body text-slate-300">
     <h2 className="card-title text-slate-200">{chef_name}</h2>
     <div className='flex justify-between '>
