@@ -10,7 +10,7 @@ const Main = () => {
     return (
         <div className="relative">
             <Header></Header>
-            <div>{navigation.state === 'loading' && <div className='flex justify-center absolute top-1/2 left-1/2 pt-20 h-screen bg-white items-center'><button className="btn btn-square loading w-20 mx-auto"></button></div>}</div>
+            <div>{navigation.state === 'loading' && <div className='flex justify-center absolute top-0   h-full w-full z-50 bg-white items-center'><button className="btn btn-square loading flex items-center justify-center mx-auto"></button></div>}</div>
             <Outlet ></Outlet>
 
             
