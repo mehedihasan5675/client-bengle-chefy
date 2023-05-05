@@ -8,7 +8,7 @@ const Register = () => {
   const navigate=useNavigate()
   const [error,setError]=useState('')
   const [success,setSuccess]=useState('')
-  const {createUser}=useContext(AuthContext)
+  const {createUser,setReload}=useContext(AuthContext)
   const handleSubmit=(e)=>{
     e.preventDefault()
     const form=e.target
@@ -22,6 +22,17 @@ const Register = () => {
     setError('The password is less than 6 characters!')
     // toast.error(error)
     return
+}
+const userUpdate=(currentUser,name,photoURL)=>{
+  updateProfile(currentUser,{
+     displayName:name,photoURL:photoURL
+ })
+ .then(()=>{
+  setReload(true)
+ })
+.catch(error=>{
+ console.log(error);
+})
 }
     createUser(email,password)
     .then(result=>{
@@ -38,15 +49,7 @@ const Register = () => {
       setError(error.message)
     })
     
-    const userUpdate=(currentUser,name,photoURL)=>{
-       updateProfile(currentUser,{
-          displayName:name,photoURL:photoURL
-      })
-      .then(()=>{})
-    .catch(error=>{
-      console.log(error);
-    })
-  }
+   
     
   }
     return (

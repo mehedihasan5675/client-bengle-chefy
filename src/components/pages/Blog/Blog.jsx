@@ -22,7 +22,7 @@ const Blog = () => {
             
 
 
-           <div className='pdf'>
+           <div className=''>
               <ReactToPrint trigger={()=><button className='bg-yellow-400 flex px-5 py-4 rounded-lg text-black italic tracking-wider font-semibold text-xl mt-10 mx-auto'>PDF Download</button>} content={()=>ref.current}></ReactToPrint>
               <div className='sss'>
                 <div ref={ref} className='w-full lg:w-6/12  mx-auto py-20 md:px-10 px-5'>

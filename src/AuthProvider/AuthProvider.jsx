@@ -9,6 +9,7 @@ const AuthProvider = ({children}) => {
 
     const [user,setUser]=useState(null)
     const [loading,setLoading]=useState(true)
+    const [reload,setReload]=useState(false)
     const createUser=(email,password)=>{
         setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password)
@@ -40,13 +41,14 @@ const AuthProvider = ({children}) => {
         return ()=>{
             unsubscribe()
         }
-      },[])
+      },[reload])
     const authInfo={
         providerGoogle,
         providerGithub,
         resetPassword,
         createUser,
         loginUser,
+        setReload,
         logOut,
         user,
         loading
