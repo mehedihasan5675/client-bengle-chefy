@@ -1,10 +1,11 @@
 import { updateProfile } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 const Register = () => {
+  const navigate=useNavigate()
   const [error,setError]=useState('')
   const [success,setSuccess]=useState('')
   const {createUser}=useContext(AuthContext)
@@ -29,6 +30,7 @@ const Register = () => {
       userUpdate(registeredUser,name,photoURL)
       toast.success("Registered successfully Done!")
       setSuccess('Registered successfully Done!')
+      navigate('/')
     })
     .catch(error=>{
       console.log(error);
@@ -46,7 +48,7 @@ const Register = () => {
     
   }
     return (
-        <div className='bg-gray-800 pb-40 pt-56 justify-center flex md:pt-20'>
+        <div className='bg-gray-800 px-5 pb-40 pt-56 justify-center flex md:pt-20'>
             
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                 

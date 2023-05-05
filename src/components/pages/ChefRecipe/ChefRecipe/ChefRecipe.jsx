@@ -47,7 +47,7 @@ const ChefRecipe = () => {
 
 
 
-<div className=' mx-10 md:mx-20  mt-20  text-slate-200'>
+<div className=' mx-5  md:mx-20  mt-20  text-slate-200'>
 {
         recipes.map((recipe,i)=><RecipeCard key={i} data={data} recipe={recipe}></RecipeCard>)
     }

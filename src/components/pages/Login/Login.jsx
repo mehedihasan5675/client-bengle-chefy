@@ -67,8 +67,8 @@ const handleGithubLogin=()=>{
   })
 }
     return (
-        <div className='bg-gray-800 pb-40 pt-56 justify-center flex md:pt-20'>
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className='bg-gray-800 px-5 pb-40 pt-56 justify-center flex md:pt-20'>
+            <div className="card flex-shrink-0  w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">

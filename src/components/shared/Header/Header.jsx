@@ -5,7 +5,8 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import ActiveLink from '../../ActiveLink/ActiveLink';
 
 const Header = () => {
-  const {user,logOut}=useContext(AuthContext)
+  const {user,logOut,loading}=useContext(AuthContext)
+ 
     const [openNav,setOpenNav]=useState(false)
     const navigate=useNavigate()
     const handleLogOut=()=>{

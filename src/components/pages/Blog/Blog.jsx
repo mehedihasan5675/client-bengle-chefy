@@ -8,7 +8,7 @@ const Blog = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
   <div className="max-w-md">
-      <h1 className="mb-5 tracking-wider  text-5xl italic text-yellow-300 font-bold"> Trending Blog's ShowCase.</h1>
+      <h1 className="mb-5 mt-10 tracking-wider text-3xl md:text-5xl italic text-yellow-300 font-bold"> Trending Blog's ShowCase.</h1>
       <p className="mb-5 text-lg tracking-widest  shadow-current p-5 rounded-lg  shadow-2xl italic">Here has been answered some question ...</p>
       <button className="btn btn-warning">Thanks we for Coming...</button>
     </div>
@@ -26,7 +26,7 @@ const Blog = () => {
               <ReactToPrint trigger={()=><button className='bg-yellow-400 flex px-5 py-4 rounded-lg text-black italic tracking-wider font-semibold text-xl mt-10 mx-auto'>PDF Download</button>} content={()=>ref.current}></ReactToPrint>
               <div className='sss'>
                 <div ref={ref} className='w-full lg:w-6/12  mx-auto py-20 md:px-10 px-5'>
-                <div  className=" border border-base-300 bg-base-100 rounded-box p-10">
+                <div  className=" border border-base-300 bg-base-100 rounded-box p-5">
                     <div className=" text-xl font-medium">
                         1.The differences between uncontrolled and controlled components.?
                     </div>
@@ -36,7 +36,7 @@ const Blog = () => {
                 </div>
 
 
-                <div  className="p-10 border border-base-300 bg-base-100 my-5 rounded-box">
+                <div  className="p-5 border border-base-300 bg-base-100 my-5 rounded-box">
                     <div className=" text-xl font-medium">
                         2.How to validate React props using PropTypes?
                     </div>
@@ -49,7 +49,7 @@ Alternatively, we can use a package like prop-types-exact to check exact prop ty
 
 
 
-                <div  className=" border border-base-300 p-10 bg-base-100 rounded-box">
+                <div  className=" border border-base-300 p-5 bg-base-100 rounded-box">
                     <div className=" text-xl font-medium">
                         3.The difference between nodejs and express js?
                     </div>
@@ -63,7 +63,7 @@ Alternatively, we can use a package like prop-types-exact to check exact prop ty
 
 
 
-                <div  className=" border border-base-300 p-10 bg-base-100 mt-5 rounded-box">
+                <div  className=" border border-base-300 p-5 bg-base-100 mt-5 rounded-box">
                     <div className=" text-xl font-medium">
                     4.What is a custom hook, and why will you create a custom hook?
                     </div>
