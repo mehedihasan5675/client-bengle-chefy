@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 const Login = () => {
   const [error,setError]=useState('')
+  const emailRef=useRef()
   const [success,setSuccess]=useState('')
-  const {loginUser,providerGoogle,providerGithub}=useContext(AuthContext)
+  const {loginUser,providerGoogle,providerGithub,resetPassword}=useContext(AuthContext)
   const location=useLocation()
 console.log(location);
 const navigate=useNavigate()
@@ -49,7 +50,22 @@ const handleGoogleLogin=()=>{
     setError(error.message.slice(9,-1))
   })
 }
-
+const handleResetPassword=()=>{
+  const email=emailRef.current.value
+  if(!email){
+    alert('Please fill your email input.')
+  }
+  console.log(email);
+  resetPassword(email)
+  .then(()=>{
+    toast.info('Password reset email sent!')
+  })
+  .catch((error)=>{
+    console.log(error.message);
+    setSuccess('')
+    setError(error.message)
+  })
+}
 
 const handleGithubLogin=()=>{
   providerGithub()
@@ -74,7 +90,7 @@ const handleGithubLogin=()=>{
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email"name='email' placeholder="email" className="input input-bordered" />
+          <input ref={emailRef} type="email"name='email' placeholder="email" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
@@ -83,7 +99,7 @@ const handleGithubLogin=()=>{
           <input type="password"name='password' placeholder="password" className="input input-bordered" />
           <p className='text-red-400 italic'>{error}</p>
           {/* <p className='text-green-500 italic'>{success}</p> */}
-          <label className="label">
+          <label className="label" onClick={handleResetPassword}>
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
